@@ -10,7 +10,7 @@ node_modules/
 .DS_Store
 
 # Private
-config.js
+#config.js
 key*.json
 
 # Other
