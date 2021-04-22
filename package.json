@@ -13,7 +13,7 @@
   "dependencies": {
     "node-fetch": "^2.6.1",
     "useful": "konser80/useful"
-  }
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
