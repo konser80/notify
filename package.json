@@ -1,0 +1,23 @@
+{
+  "name": "notify",
+  "version": "1.0.0",
+  "description": "notify me via bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/konser80/notify.git"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.1",
+    "useful": "konser80/useful"
+  }
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/konser80/notify/issues"
+  },
+  "homepage": "https://github.com/konser80/notify#readme"
+}

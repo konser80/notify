@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
+const useful = require('useful');
 const config = require('./config.js');
-const useful = require('../useful/useful.js');
 
 module.exports = async function notify(txt) {
   const response = await fetch(config.notify_url, {
