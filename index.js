@@ -2,12 +2,19 @@ const fetch = require('node-fetch');
 const useful = require('useful');
 const config = require('./config.js');
 
-module.exports = async function notify(txt) {
-  const response = await fetch(config.notify_url, {
+
+function notify(txt, callback) {
+  const response = fetch(config.notify_url, {
     method: 'POST',
     body: JSON.stringify({ txt: useful.textify(txt, false) }),
     headers: { 'Content-Type': 'application/json' }
+  }).then(response => response.text())
+  .then(data => {
+    if (callback) callback(data)
   });
 
-  return response;
+  // if (callback) return callback(response);
 }
+
+
+module.exports = notify;
