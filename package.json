@@ -12,12 +12,17 @@
   },
   "dependencies": {
     "node-fetch": "^2.6.1",
-    "useful": "konser80/useful"
+    "useful": "github:konser80/useful"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/konser80/notify/issues"
   },
-  "homepage": "https://github.com/konser80/notify#readme"
+  "homepage": "https://github.com/konser80/notify#readme",
+  "devDependencies": {
+    "eslint": "^7.27.0",
+    "eslint-plugin-airbnb-base": "^0.0.1-security",
+    "eslint-plugin-import": "^2.23.4"
+  }
 }
