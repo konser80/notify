@@ -1,6 +1,6 @@
 {
   "name": "notify",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "notify me via bot",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "node-fetch": "^2.6.1",
-    "useful": "github:konser80/useful"
+    "tools": "github:konser80/tools"
   },
   "author": "",
   "license": "ISC",
