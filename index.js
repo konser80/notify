@@ -24,7 +24,7 @@ function onTimer() {
     let text = key;
     if (array[key] > 1) text += ` [count: ${array[key]}]`;
 
-    console.log(`[ ] sending text: ${text}`);
+    // console.debug(`[ ] sending text: ${text}`);
 
     // ready? send!
     fetch(config.notify_url, {
@@ -38,7 +38,7 @@ function onTimer() {
         console.debug(`[+] notify response: ${data}`);
       })
       .catch((e) => {
-        console.error(e.message);
+        console.error(`[-] notify error: ${e.message}`);
       });
 
   });
