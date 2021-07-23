@@ -5,6 +5,7 @@ const config = require('./config');
 let job = null;
 let array = {};
 
+// ==============================================
 function onEvent(param) {
 
   const txt = tools.textify(param, { colors: false });
@@ -33,10 +34,10 @@ function onTimer() {
       headers: { 'Content-Type': 'application/json' }
     })
       .then((response) => response.text())
-      .then((data) => {
-        // if (callback) return callback(data);
-        console.debug(`[+] notify response: ${data}`);
-      })
+      // .then((data) => {
+      // if (callback) return callback(data);
+      // console.debug(`[+] notify response: ${data}`);
+      // })
       .catch((e) => {
         console.error(`[-] notify error: ${e.message}`);
       });
