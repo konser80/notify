@@ -2,11 +2,14 @@ const fetch = require('node-fetch');
 const tools = require('tools');
 const config = require('./config');
 
+const DEBUG = false;
+
 let job = null;
 let array = {};
 
 // ==============================================
 function onEvent(param) {
+  if (DEBUG) console.debug(`onEvent: ${param}`);
 
   const txt = tools.textify(param, { colors: false });
   array[txt] = array[txt] +1 || 1;
@@ -18,14 +21,14 @@ function onEvent(param) {
 // ==============================================
 function onTimer() {
 
-  // console.debug('[+] notify: sending array');
-  // console.debug(array);
+  if (DEBUG) console.debug('[+] notify: sending array');
+  if (DEBUG) console.debug(array);
 
   Object.keys(array).forEach((key) => {
     let text = key;
     if (array[key] > 1) text += ` [count: ${array[key]}]`;
 
-    // console.debug(`[ ] sending text: ${text}`);
+    if (DEBUG) console.debug(`[ ] sending text: ${text}`);
 
     // ready? send!
     fetch(config.notify_url, {
@@ -44,7 +47,7 @@ function onTimer() {
 
   });
 
-  // console.debug('[+] notify: clear array');
+  if (DEBUG) console.debug('[+] notify: clear array');
   array = {};
 }
 
