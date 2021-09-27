@@ -1,5 +1,5 @@
 module.exports = {
 
-  notify_url: 'https://spider2.chat-monitor.ru/notifybot/alert'
+  notify_url: 'https://bs1.konser.ru/notifybot/alert'
 
 };
